@@ -55,6 +55,9 @@ header{
     text-align: center;
 
 }
+/* header .user {
+    margin-top: 2.5rem;
+} */
 header .user img {
     height: 15rem;
     width: 15rem;
@@ -82,6 +85,7 @@ header .navbar ul{
     list-style: none;
     padding: 1rem 3rem;
 }
+
 header .navbar ul li a {
     display: block;
     padding: 1rem;
@@ -91,6 +95,47 @@ header .navbar ul li a {
     font-size: 2rem;
     border-radius: 5rem;
 }
+
 header .navbar ul li a:hover{
     background: var(--yellow);
+}
+
+#menu{
+    position: fixed;
+    top: 2rem; right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+/* media queries */
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width:991px) {
+    header {
+        left: -120%;
+    }
+    #menu {
+        display: block;
+    }
+    header.toggle{
+        left: 0%;
+    }
+}
+@media (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media (max-width:400px) {
+    header {
+        width: 100vw;
+    }
 }
